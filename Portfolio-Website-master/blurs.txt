@@ -1,0 +1,21 @@
+{/*   <div className={`absolute mix-blend-plus-lighter bg-purple-800 */}
+                 {/*dark:mix-blend-overlay dark:bg-yellow-400 */}
+                 {/*animate-blob mb-32 w-72 h-72 md:w-[450px] md:h-[450px]  rounded-full filter blur-xl`}></div>*/}
+                 {/*   <div className={`absolute mix-blend-plus-lighter bg-red-800 */}
+                 {/*dark:mix-blend-overlay dark:bg-red-400 */}
+                 {/*animate-blob mt-96 w-72 h-72 md:w-[450px] md:h-[450px]  rounded-full filter blur-xl`}></div>*/}
+                 {/*   <div className={`absolute mix-blend-plus-lighter bg-green-800 */}
+                 {/*dark:mix-blend-overlay dark:bg-green-500 */}
+                 {/*animate-blob mt-56 ml-96 w-72 h-72 md:w-[450px] md:h-[450px]  rounded-full filter blur-xl`}></div>*/}
+                 {/*   <div className={`absolute mix-blend-plus-lighter bg-green-800 */}
+                 {/*dark:mix-blend-overlay dark:bg-blue-600 */}
+                 {/*animate-blob mt-56 -ml-96 w-72 h-72 md:w-[450px] md:h-[450px]  rounded-full filter blur-xl`}></div>*/}
+                 {/*   <div className={`absolute mix-blend-plus-lighter bg-green-800 */}
+                 {/*dark:mix-blend-overlay dark:bg-teal-600  */}
+                 {/*animate-blob -mt-40 -ml-[450px] w-72 h-72 md:w-[450px] md:h-[450px]  rounded-full filter blur-xl`}></div>*/}
+                 {/*   <div className={`absolute mix-blend-plus-lighter bg-green-800 */}
+                 {/*dark:mix-blend-overlay dark:bg-orange-500 */}
+                 {/*animate-blob -mt-40 -mr-[450px] w-72 h-72 md:w-[450px] md:h-[450px]  rounded-full filter blur-xl`}></div>*/}
+                 {/*   <div className={`absolute mix-blend-plus-lighter bg-green-800 */}
+                 {/*dark:mix-blend-overlay dark:bg-purple-500 */}
+                 {/*animate-blob -mt-[650px] w-72 h-72 md:w-[450px] md:h-[450px]  rounded-full filter blur-xl`}></div>*/}
