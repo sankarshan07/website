@@ -76,6 +76,14 @@ import gitlab from '../assets/gitlab.svg';
 import ec2 from '../assets/ec2.svg';
 import computeengine from '../assets/computeengine.svg';
 import lambda from '../assets/lambda.svg';
+import skbook from '../assets/skbook.png';
+import location from '../assets/location.png';
+import netedu from '../assets/netedu.png';
+import calcu from '../assets/calcu.png';
+import landingp from '../assets/landingp.png';
+import floating from '../assets/floating.png';
+import todolist from '../assets/todolist.png';
+import vista from '../assets/vista.png';
 export default {
     ec2,
     computeengine,
@@ -154,5 +162,13 @@ export default {
     discussion,
     nextauth,
     sankyy,
-    sanky
+    sanky,
+    skbook,
+    location,
+    netedu,
+    calcu,
+    landingp,
+    floating,
+    todolist,
+    vista
 };

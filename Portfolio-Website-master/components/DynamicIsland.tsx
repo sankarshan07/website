@@ -14,6 +14,7 @@ interface NavbarProps {
 interface navMotionProps {
     children: React.ReactNode
 }
+
 const Navbar: React.FC<NavbarProps> = ({navItems}) => {
     const spanClassName = 'w-14 h-14  text-xl rounded-full inline-flex  items-center justify-center transition duration-250 ease-in'
     const [isExpanded, setIsExpanded] = useState(false);
@@ -26,15 +27,18 @@ const Navbar: React.FC<NavbarProps> = ({navItems}) => {
             document.documentElement.classList.remove('dark')
         }
     }, [theme])
+
     const handleThemeSwitch = (e: any) => {
         e.stopPropagation();
         e.preventDefault();
         setTheme(theme === 'dark' ? 'light' : 'dark')
     }
+
     const handleImageHover = (e: any) => {
         e.stopPropagation();
         e.preventDefault();
     }
+
     const router = useRouter()
 
     const containerVariants = {
@@ -55,6 +59,25 @@ const Navbar: React.FC<NavbarProps> = ({navItems}) => {
             },
         },
     };
+
+    const socialMediaLinks = [
+        {
+            icon: <BsLinkedin size={30}/>,
+            link: 'https://www.linkedin.com/in/sankarshan-desai-94a026268/',
+            className: 'hover:text-[#0077b5] text-purple-500 dark:text-black'
+        },
+        {
+            icon: <BsInstagram size={30}/>,
+            link: 'https://www.instagram.com/sankarshan_desai/?igsh=Z2hiOXdqcmQwZ2F2',
+            className: 'dark:text-black text-yellow-500 hover:text-red-500'
+        },
+        {
+            icon: <BsGithub size={30}/>,
+            link: 'https://github.com/sankarshan07',
+            className: 'dark:text-black text-green-500 hover:text-red-500'
+        }
+    ];
+
     return (
         <motion.div className={'overflow-visible select-none  sticky top-0 z-50 transition-100 ease-in'}
             initial={{scale: 0}}
@@ -94,34 +117,18 @@ const Navbar: React.FC<NavbarProps> = ({navItems}) => {
                                 rotate: 180,
                                 borderRadius: "100%"
                             }}>
-                    <Image  src={images.sanky} alt={''} className={`${isExpanded ? 'hidden' : ''} no-drag w-[50px] ml-2 h-[50px] bg-white select-none md:hover:invert md:hover:grayscale dark:invert md:dark:hover:invert-0 md:dark:hover:grayscale-0 transition duration-300 dark:grayscale rounded-full`}/>
+                            <Image  src={images.sanky} alt={''} className={`${isExpanded ? 'hidden' : ''} no-drag w-[50px] ml-2 h-[50px] bg-white select-none md:hover:invert md:hover:grayscale dark:invert md:dark:hover:invert-0 md:dark:hover:grayscale-0 transition duration-300 dark:grayscale rounded-full`}/>
                         </motion.div>
                     </Bounce>
                     <div className={`select-none font-black font-BebasNeue italic flex text-3xl  rounded-full transition duration-300 ease-in ${isExpanded ? '' : 'hidden'}`}>
                         <div className={' ml-2 flex '}>
-                            <Bounce>
-                                <a className={'inline-flex'}
-                                   href="https://www.linkedin.com/in/sankarshan-desai-94a026268/"
-                                   target="_blank">
-                                    <span
-                                        className={spanClassName + " hover:text-[#0077b5] text-purple-500 dark:text-black"}><BsLinkedin
-                                        size={30}/></span>
-                                </a>
-                            </Bounce>
-                            <Bounce>
-                                <a className={'inline-flex'} href="https://www.instagram.com/sankarshan_desai/?igsh=Z2hiOXdqcmQwZ2F2"
-                                   target="_blank">
-                                <span className={spanClassName + ' dark:text-black text-yellow-500 hover:text-red-500'}>< BsInstagram
-                                    size={30}/></span>
-                                </a>
-                            </Bounce>
-                            <Bounce>
-                                <a className={'inline-flex'} href="https://github.com/sankarshan07" target="_blank">
-                                    <span
-                                        className={spanClassName + " dark:text-black text-green-500 hover:text-red-500"}><BsGithub
-                                        size={30}/></span>
-                                </a>
-                            </Bounce>
+                            {socialMediaLinks.map((link, index) => (
+                                <Bounce key={index}>
+                                    <a className={'inline-flex'} href={link.link} target="_blank">
+                                        <span className={spanClassName + ' ' + link.className}>{link.icon}</span>
+                                    </a>
+                                </Bounce>
+                            ))}
                         </div>
                     </div>
                     <div onClick={(e) => {setIsExpanded(!isExpanded)}}
